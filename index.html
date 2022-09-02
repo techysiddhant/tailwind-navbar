@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body id="body">
+
+    <header id="header" class="fixed w-full flex justify-between items-center px-4 md:px-12 h-20 bg-blue-500 transition-all duration-300">
+        <a href="" class="text-2xl text-white">Logo</a>
+        <div class="hidden md:block">
+            <input class="focus:outline-none p-1 bg-gray-300 rounded-sm " type="search" name="search" id="" placeholder="Search here">
+            <button class="px-4 py-1 rounded-sm ml-2 bg-yellow-400 text-slate-700" type="submit">Search</button>
+        </div>
+        <nav>
+            <button id="open-btn" class="bg-purple-500 h-10 w-10 rounded-full">AS</button>
+            <!-- <ul id="navbar" class="fixed drop-shadow-md top-0 right-0 min-h-screen bg-blue-300 w-1/2 text-white space-y-4 p-4 close">
+                    <li>
+                        <button id="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                              </svg>
+                              
+                        </button>
+                    </li>
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul> -->
+            <div id="navbar" class="fixed drop-shadow-md top-0 right-0 min-h-screen bg-blue-300 w-full lg:w-1/2 text-white space-y-4 p-4 close">
+                <div class="block">
+                    <button id="close-btn">Close</button>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <div>
+                        <button id="open-btn" class="bg-purple-500 h-32 w-32 rounded-full text-3xl text-center">AS</button>
+                    </div>
+                    <div class="w-10/12 bg-red-500 h-0.5 mt-8"></div>
+                    <div class="flex flex-row m-8 px-8">
+                        <div class="flex flex-col justify-center items-center p-8">
+                            <span>Public Story</span>
+                            <span>100</span>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <span>Private Story</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="features" class="min-h-screen bg-gray-300"></section>
+    <section id="about" class="min-h-screen bg-gray-300"></section>
+    <section id="contact" class="min-h-screen"></section>
+    <footer class="fixed bottom-0 w-full  bg-blue-500 px-8 h-14">
+        <div class="text-white flex justify-around items-center pt-1">
+            <button class="flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <h1>Home</h1>
+            </button>
+            <button class="flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1>Add Story</h1>
+            </button>
+            <button class="flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                <h1>search</h1>
+            </button>
+            <button class="flex flex-col justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+                  </svg>
+                  <h1>Logout</h1>
+            </button>
+        </div>
+    </footer>
+    <script>
+        const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn')
+        const navBar = document.getElementById('navbar');
+        const header = document.getElementById('header');
+        const body = document.getElementById('body');
+        openBtn.addEventListener('click', () => {
+            navBar.classList.toggle('close');
+            navBar.classList.toggle('open');
+            body.classList.remove('overflowopen');
+            body.classList.add('overflowhidden');
+        });
+        closeBtn.addEventListener('click', () => {
+                navBar.classList.toggle('open');
+                navBar.classList.toggle('close');
+                body.classList.remove('overflowhidden');
+                body.classList.toggle('overflowopen');
+
+            })
+            // header.addEventListener('scroll', () => {
+            //     header.classList.toggle('h-16');
+            // })
+        window.addEventListener('scroll', () => {
+            console.log(window.pageYOffset);
+            if (window.pageYOffset > 60) {
+                header.classList.remove('h-20');
+                header.classList.add('h-12');
+            } else if (window.pageYOffset < 60) {
+                header.classList.remove('h-12');
+                header.classList.add('h-20');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
